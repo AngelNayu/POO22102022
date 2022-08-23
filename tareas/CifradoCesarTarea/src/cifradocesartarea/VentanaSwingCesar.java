@@ -77,7 +77,7 @@ public class VentanaSwingCesar extends JFrame {
                 String fraseC;//String donde se almacenara la frase cifrada
                 fraseC = "";
                 String frase; //string que almacene el texto que de el usuario
-                frase = cuadroTexto.getText();//aqui se obtiene 
+                frase = cuadroTexto.getText();//aqui se obtiene el String que da el usuario para cifrar
                 int desplazamiento = Integer.parseInt(conversor.getText());//obtenemos el string del desplazamiento y lo convertimos en un entero
                 
                 
