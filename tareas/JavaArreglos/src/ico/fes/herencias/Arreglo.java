@@ -5,54 +5,56 @@
 package ico.fes.herencias;
 
 import java.util.AbstractList;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
  *
  * @author genar
+ * @param <T>
  */
-public class Arreglo  {
-   
+public class Arreglo<T>  {
+ 
     int tamanio;
-    int longitud;
-    int elemento;
-    int indice;
-    String valor;
-
-    public Arreglo() {
-    }
-
-    public Arreglo(int tamanio, int longitud, int elemento, int indice, String valor) {
-        this.tamanio = tamanio;
-        this.longitud = longitud;
-        this.elemento = elemento;
-        this.indice = indice;
-        this.valor = valor;
-    }
-
-    public Arreglo(int tamanio) {
-        this.tamanio = tamanio;
+    ArrayList<T> datos;
+    
+    public Arreglo(int tam){
+        this.tamanio = tam;
+        datos = new ArrayList();
+        for (int i = 0; i < this.tamanio; i++) {
+            datos.add(null);          
+        }
     }
     
-    public int getlongitud(){
-        return 0;
-    }
-    
-    public void setElemento(int indice,String valor ){
+    public T getElemento(int indice){
+        
+        return datos.get(indice);
         
     }
-    public int getElemento(int indice){
-        return 0;
+    
+    public void setElemento(int indice, T dato)throws IndexOutOfBoundsException{
+        this.datos.set(indice, dato);
     }
     
-    public void clear(int valor){
-        
-    }
-
-    @Override
-    public String toString() {
-        return "Arreglo{" + "tamanio=" + tamanio + ", longitud=" + longitud + ", elemento=" + elemento + ", indice=" + indice + ", valor=" + valor + '}';
+    public int getTamanio(){
+        return tamanio;
     }
     
+    public void limpiar(T dato){
+        for (int i = 0; i < datos.size(); i++) {
+            datos.set(i, dato);
+        }
+    }
+    
+    @Override 
+    public String toString(){
+        String estado= "";
+        for (T dato : datos) {
+            if (dato != null) {
+                estado += dato.toString()+ "\n";
+            }
+        }
+        return estado;
+    }
     
 }
