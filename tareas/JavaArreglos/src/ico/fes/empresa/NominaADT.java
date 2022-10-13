@@ -15,9 +15,10 @@ import java.io.IOException;
  * @author genar
  */
 public class NominaADT {
-    String nombreEmpresa;
-    Arreglo<Empleado> nomina;
-    String rutaArchivo;
+    private String nombreEmpresa;
+    private Arreglo<Empleado> nomina;
+    private String rutaArchivo;
+    
     
     
     public NominaADT(String ruta) throws IOException{
@@ -36,4 +37,5 @@ public class NominaADT {
             System.err.println(ex.getMessage());
         }
     }
+    
 }

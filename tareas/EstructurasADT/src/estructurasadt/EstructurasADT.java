@@ -2,23 +2,22 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
-package javaarreglos;
+package estructurasadt;
 
-import Estructuras.Nodo;
+import ListasADT.Nodo;
 
 /**
  *
  * @author genar
  */
-public class JavaArreglos {
+public class EstructurasADT {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        
-        Nodo<Integer> head = new Nodo(10);
+         Nodo<Integer> head = new Nodo(10);
         head.setSiguiente(new Nodo(20,null));
         head.getSiguiente().setSiguiente(new Nodo(30));
         System.out.println( head.getSiguiente().getSiguiente().getDato() );
@@ -36,9 +35,7 @@ public class JavaArreglos {
             aux = aux.getSiguiente();
         }
         
+        
     }
     
-    
-    }
-    
-
+}
