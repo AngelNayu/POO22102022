@@ -30,7 +30,7 @@ public class ListaLigadaADT <T>{
      *
      * @param valor
      */
-    public void agregarAlFinal(<T> valor){
+    public void agregarAlFinal(T valor){
         
         if (this.Head==null) {
             Head= new Nodo<>(valor);

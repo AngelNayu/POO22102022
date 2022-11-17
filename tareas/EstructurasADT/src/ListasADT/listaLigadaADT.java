@@ -29,7 +29,7 @@ public class listaLigadaADT <T>{
      *
      * @param valor
      */
-    public void agregarAlFinal(<T> valor){
+    public void agregarAlFinal(T valor){
         
         if (this.head==null) {
             head= new Nodo<>(valor);
