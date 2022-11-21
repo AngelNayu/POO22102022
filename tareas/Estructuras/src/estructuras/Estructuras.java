@@ -16,13 +16,16 @@ public class Estructuras {
     
     public static void main(String[] args) {
         
-        Stack<Integer> PilaA = new Stack<Integer>(5);
+        Stack<Integer> PilaA = new Stack<Integer>(5);// el 5 es para marcar el limite
         
         PilaA.push(35);
         PilaA.push(45);
         PilaA.push(25);
         PilaA.push(5);
         PilaA.push(2);
+        PilaA.push(7);//con este confirmamos si funciona el limite
+        
+
         System.out.println(PilaA.isFull());
         System.out.println(PilaA.isEmpty());
         System.out.println(PilaA.length());
