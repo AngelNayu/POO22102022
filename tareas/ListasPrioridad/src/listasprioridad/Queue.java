@@ -50,6 +50,9 @@ public class Queue<T> {
         return str;
     }
     
+    public ArrayList<T> getData(){
+        return cola;
+    }
     
     
 }
